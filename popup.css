@@ -1,0 +1,130 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+:root {
+  --bg: #f4f4f6;
+  --text: #2c2d33;
+  --placeholder: #b7b8bf;
+  --input-bg: #efeff2;
+  --input-border: #ececf0;
+  --primary: #c2c1f2;
+  --secondary: #ececef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 760px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 100%;
+  padding: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid var(--input-border);
+  border-radius: 20px;
+  background: var(--input-bg);
+  color: var(--text);
+  font-size: 46px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  padding: 28px 34px;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--placeholder);
+  font-weight: 600;
+}
+
+select {
+  appearance: none;
+  padding-right: 90px;
+  background-image: linear-gradient(45deg, transparent 50%, #32343a 50%), linear-gradient(135deg, #32343a 50%, transparent 50%);
+  background-position: calc(100% - 44px) calc(50% - 8px), calc(100% - 30px) calc(50% - 8px);
+  background-size: 16px 16px, 16px 16px;
+  background-repeat: no-repeat;
+}
+
+textarea {
+  min-height: 260px;
+  resize: vertical;
+}
+
+.status {
+  min-height: 28px;
+  margin: -8px 4px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #5962ff;
+}
+
+.status.error {
+  color: #db4049;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.btn {
+  border: none;
+  border-radius: 20px;
+  padding: 24px 10px;
+  font-size: 52px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #2f3138;
+  cursor: pointer;
+}
+
+.btn-light {
+  background: var(--secondary);
+}
+
+.btn-primary {
+  background: var(--primary);
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>링크 저장</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="container">
+      <form id="linkForm" class="form">
+        <section class="field-group">
+          <label for="why">이유</label>
+          <input id="why" name="why" type="text" placeholder="저장한 이유를 입력해 주세요" required />
+        </section>
+
+        <section class="field-group">
+          <label for="url">링크</label>
+          <input id="url" name="url" type="url" placeholder="링크를 입력해 주세요" required />
+        </section>
+
+        <section class="field-group">
+          <label for="referenceId">레퍼런스 폴더 선택</label>
+          <select id="referenceId" name="referenceId" required>
+            <option value="">레퍼런스 폴더를 선택해주세요</option>
+          </select>
+        </section>
+
+        <section class="field-group">
+          <label for="memo">메모</label>
+          <textarea id="memo" name="memo" placeholder="메모를 입력하세요(선택)"></textarea>
+        </section>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+
+        <div class="actions">
+          <button id="cancelBtn" type="button" class="btn btn-light">취소</button>
+          <button id="saveBtn" type="submit" class="btn btn-primary">저장</button>
+        </div>
+      </form>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

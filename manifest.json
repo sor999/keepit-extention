@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Keepit 링크 저장",
+  "description": "링크, 이유, 메모를 레퍼런스 폴더와 함께 저장합니다.",
+  "version": "1.0.0",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://api.so999.site/*"],
+  "action": {
+    "default_title": "Keepit 링크 저장",
+    "default_popup": "popup.html"
+  }
+}
